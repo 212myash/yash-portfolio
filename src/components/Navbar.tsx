@@ -19,6 +19,16 @@ const Navbar = () => {
         <a href="#skills">Skills</a>
         <a href="#certificates">Certificates</a>
         <a href="#projects">Projects</a>
+
+        {/* RESUME */}
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </a>
+
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </div>
@@ -40,11 +50,39 @@ const Navbar = () => {
 
       {/* MOBILE MENU */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <a href="#about" onClick={closeMenu}>About</a>
-        <a href="#skills" onClick={closeMenu}>Skills</a>
-        <a href="#projects" onClick={closeMenu}>Projects</a>
-        <a href="#experience" onClick={closeMenu}>Experience</a>
-        <a href="#contact" onClick={closeMenu}>Contact</a>
+        <a href="#about" onClick={closeMenu}>
+          About
+        </a>
+
+        <a href="#skills" onClick={closeMenu}>
+          Skills
+        </a>
+
+        <a href="#certificates" onClick={closeMenu}>
+          Certificates
+        </a>
+
+        <a href="#projects" onClick={closeMenu}>
+          Projects
+        </a>
+
+        {/* MOBILE RESUME */}
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={closeMenu}
+        >
+          Resume
+        </a>
+
+        <a href="#experience" onClick={closeMenu}>
+          Experience
+        </a>
+
+        <a href="#contact" onClick={closeMenu}>
+          Contact
+        </a>
 
         <a
           href="#contact"
