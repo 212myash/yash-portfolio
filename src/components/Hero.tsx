@@ -65,10 +65,6 @@ const Hero = () => {
           "-=0.2"
         );
 
-      /* =========================
-         BACKGROUND GLOW
-      ========================= */
-
       gsap.to(".glow-one", {
         x: 40,
         y: -30,
@@ -88,150 +84,64 @@ const Hero = () => {
       });
     }, heroRef);
 
-    /* =========================
-       MOBILE CHARACTER SCROLL
-    ========================= */
-
-    const handleCharacterScroll = () => {
-      // Desktop par kuch nahi karna
-      if (window.innerWidth > 900) {
-        gsap.set(".character-2d", {
-          scale: 1,
-          opacity: 1,
-        });
-
-        return;
-      }
-
-      const scrollY = window.scrollY;
-
-      /*
-        0px scroll  = full size
-        500px scroll = completely hidden
-      */
-      const progress = Math.min(scrollY / 500, 1);
-
-      /*
-        Character:
-        1.0  -> normal size
-        0.35 -> smallest size
-      */
-      const scale = 1 - progress * 0.65;
-
-      /*
-        Character:
-        1.0 -> fully visible
-        0.0 -> invisible
-      */
-      const opacity = 1 - progress;
-
-      gsap.set(".character-2d", {
-        scale: scale,
-        opacity: opacity,
-        transformOrigin: "center bottom",
-      });
-    };
-
-    // Initial position
-    handleCharacterScroll();
-
-    window.addEventListener("scroll", handleCharacterScroll, {
-      passive: true,
-    });
-
-    window.addEventListener("resize", handleCharacterScroll);
-
-    return () => {
-      window.removeEventListener(
-        "scroll",
-        handleCharacterScroll
-      );
-
-      window.removeEventListener(
-        "resize",
-        handleCharacterScroll
-      );
-
-      ctx.revert();
-    };
+    return () => ctx.revert();
   }, []);
 
   return (
     <section className="hero" ref={heroRef}>
-
-      {/* =========================
-          HERO CONTENT
-      ========================= */}
-
+      
+      {/* LEFT CONTENT */}
       <div className="hero-content">
-
-        <p className="hero-small">
-          HELLO, I'M
-        </p>
+        <p className="hero-small">HELLO, I'M</p>
 
         <h1>
           Yash <span>Raj</span>
         </h1>
 
-        <h2>
-          Computer Science Engineer & Developer
-        </h2>
+        <h2>Computer Science Engineer & Developer</h2>
 
         <p className="hero-description">
-          I build modern websites, applications and
-          digital experiences with clean code,
-          creative ideas and a passion for technology.
+          I build modern websites, applications and digital experiences
+          with clean code, creative ideas and a passion for technology.
         </p>
-
-        {/* HERO BUTTONS */}
 
         <div className="hero-buttons">
 
-          <a
-            href="#projects"
-            className="hero-btn hero-work"
-          >
-            View My Work
-          </a>
+  <a
+    href="#projects"
+    className="hero-btn hero-work"
+  >
+    View My Work
+  </a>
 
-          <a
-            href="/resume.pdf"
-            className="hero-btn hero-resume"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Download Resume
-          </a>
+  <a
+    href="/resume.pdf"
+    className="hero-btn hero-resume"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Download Resume
+  </a>
 
-          <a
-            href="#contact"
-            className="hero-btn hero-contact"
-          >
-            Contact Me
-          </a>
+  <a
+    href="#contact"
+    className="hero-btn hero-contact"
+  >
+    Contact Me
+  </a>
 
-        </div>
-
+</div>
       </div>
 
-      {/* =========================
-          2D CHARACTER
-      ========================= */}
-
+      {/* 2D CHARACTER */}
       <Character2D />
 
-      {/* =========================
-          BACKGROUND GLOWS
-      ========================= */}
-
+      {/* BACKGROUND GLOWS */}
       <div className="hero-glow glow-one"></div>
 
       <div className="hero-glow glow-two"></div>
 
-      {/* =========================
-          SCROLL INDICATOR
-      ========================= */}
-
+      {/* SCROLL INDICATOR */}
       <div className="scroll-indicator">
         <span></span>
         Scroll Down
