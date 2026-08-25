@@ -4,18 +4,23 @@
 
 .navbar {
   position: fixed;
+
   top: 0;
   left: 0;
+
   width: 100%;
   height: 80px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 
   padding: 0 7%;
 
   background: rgba(8, 8, 8, 0.75);
+
   backdrop-filter: blur(15px);
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -23,10 +28,16 @@
   z-index: 1000;
 }
 
+
+/* =========================
+   LOGO
+========================= */
+
 .nav-logo {
   color: #ffffff;
 
   font-size: 25px;
+
   font-weight: 800;
 
   letter-spacing: 2px;
@@ -36,19 +47,26 @@
   color: #8b5cf6;
 }
 
+
+/* =========================
+   NAV LINKS
+========================= */
+
 .nav-links {
   display: flex;
+
   align-items: center;
 
   gap: 35px;
 }
 
 .nav-links a {
+  position: relative;
+  padding: 9px 13px;
   color: #aaaaaa;
-
   font-size: 14px;
   text-decoration: none;
-
+  border-radius: 9px;
   transition: all 0.3s ease;
 }
 
@@ -56,15 +74,62 @@
   color: #ffffff;
 }
 
+/* ACTIVE SECTION */
+.nav-links a.active {
+  color: #a78bfa;
+  background: rgba(139, 92, 246, 0.12);
+}
+
+/* ACTIVE PURPLE DOT */
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+
+  left: 50%;
+  bottom: -8px;
+
+  width: 5px;
+  height: 5px;
+
+  background: #8b5cf6;
+  border-radius: 50%;
+
+  transform: translateX(-50%);
+
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.8);
+}
+
+
+/* =========================
+   RESUME
+========================= */
+
+.nav-links a.resume-link {
+  color: #ffffff;
+}
+
+.nav-links a.resume-link:hover {
+  color: #a78bfa;
+
+  background: transparent;
+}
+
+
+/* =========================
+   LET'S TALK BUTTON
+========================= */
+
 .nav-button {
   padding: 11px 20px;
 
   color: #ffffff;
 
   border: 1px solid rgba(255, 255, 255, 0.25);
+
   border-radius: 30px;
 
   font-size: 14px;
+
   text-decoration: none;
 
   transition: all 0.3s ease;
@@ -72,10 +137,9 @@
 
 .nav-button:hover {
   background: #ffffff;
+
   color: #080808;
 }
-
-
 /* =========================
    HERO SECTION
 ========================= */

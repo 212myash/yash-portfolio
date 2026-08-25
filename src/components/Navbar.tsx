@@ -1,7 +1,56 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  const sections = [
+    "about",
+    "skills",
+    "certificates",
+    "projects",
+    "experience",
+    "contact",
+  ];
+
+  useEffect(() => {
+    const updateActiveSection = () => {
+      // Hero ke andar ho to koi highlight nahi
+      if (window.scrollY < 250) {
+        setActiveSection("");
+        return;
+      }
+
+      const checkPoint = window.scrollY + 120;
+      let currentSection = "";
+
+      sections.forEach((sectionId) => {
+        const section = document.getElementById(sectionId);
+
+        if (!section) return;
+
+        const sectionTop =
+          section.getBoundingClientRect().top + window.scrollY;
+
+        if (sectionTop <= checkPoint) {
+          currentSection = sectionId;
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    // Page load / direct #section ke liye
+    updateActiveSection();
+
+    window.addEventListener("scroll", updateActiveSection);
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
+  }, []);
 
   const closeMenu = () => {
     setMenuOpen(false);
@@ -15,10 +64,39 @@ const Navbar = () => {
 
       {/* DESKTOP MENU */}
       <div className="nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#projects">Projects</a>
+        <a
+          href="#about"
+          className={activeSection === "about" ? "active" : ""}
+          onClick={closeMenu}
+        >
+          About
+        </a>
+
+        <a
+          href="#skills"
+          className={activeSection === "skills" ? "active" : ""}
+          onClick={closeMenu}
+        >
+          Skills
+        </a>
+
+        <a
+          href="#certificates"
+          className={
+            activeSection === "certificates" ? "active" : ""
+          }
+          onClick={closeMenu}
+        >
+          Certificates
+        </a>
+
+        <a
+          href="#projects"
+          className={activeSection === "projects" ? "active" : ""}
+          onClick={closeMenu}
+        >
+          Projects
+        </a>
 
         {/* RESUME */}
         <a
@@ -26,11 +104,26 @@ const Navbar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Resume
+          Resume ↗
         </a>
 
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+        <a
+          href="#experience"
+          className={
+            activeSection === "experience" ? "active" : ""
+          }
+          onClick={closeMenu}
+        >
+          Experience
+        </a>
+
+        <a
+          href="#contact"
+          className={activeSection === "contact" ? "active" : ""}
+          onClick={closeMenu}
+        >
+          Contact
+        </a>
       </div>
 
       <a href="#contact" className="nav-button">
@@ -50,37 +143,64 @@ const Navbar = () => {
 
       {/* MOBILE MENU */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <a href="#about" onClick={closeMenu}>
+        <a
+          href="#about"
+          className={activeSection === "about" ? "active" : ""}
+          onClick={closeMenu}
+        >
           About
         </a>
 
-        <a href="#skills" onClick={closeMenu}>
+        <a
+          href="#skills"
+          className={activeSection === "skills" ? "active" : ""}
+          onClick={closeMenu}
+        >
           Skills
         </a>
 
-        <a href="#certificates" onClick={closeMenu}>
+        <a
+          href="#certificates"
+          className={
+            activeSection === "certificates" ? "active" : ""
+          }
+          onClick={closeMenu}
+        >
           Certificates
         </a>
 
-        <a href="#projects" onClick={closeMenu}>
+        <a
+          href="#projects"
+          className={activeSection === "projects" ? "active" : ""}
+          onClick={closeMenu}
+        >
           Projects
         </a>
 
-        {/* MOBILE RESUME */}
         <a
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           onClick={closeMenu}
         >
-          Resume
+          Resume ↗
         </a>
 
-        <a href="#experience" onClick={closeMenu}>
+        <a
+          href="#experience"
+          className={
+            activeSection === "experience" ? "active" : ""
+          }
+          onClick={closeMenu}
+        >
           Experience
         </a>
 
-        <a href="#contact" onClick={closeMenu}>
+        <a
+          href="#contact"
+          className={activeSection === "contact" ? "active" : ""}
+          onClick={closeMenu}
+        >
           Contact
         </a>
 
