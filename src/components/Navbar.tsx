@@ -56,11 +56,11 @@ const Navbar = () => {
     setMenuOpen(false);
   };
 
-  return (
-    <nav className="navbar">
-      <div className="nav-logo">
-        YASH<span>.</span>
-      </div>
+return (
+  <nav className="navbar">
+    <a href="/" className="nav-logo">
+      <img src="/image/Logo1.png" alt="Yash Raj" />
+    </a>
 
       {/* DESKTOP MENU */}
       <div className="nav-links">
@@ -104,7 +104,7 @@ const Navbar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Resume ↗
+          Resume
         </a>
 
         <a
@@ -183,7 +183,7 @@ const Navbar = () => {
           rel="noopener noreferrer"
           onClick={closeMenu}
         >
-          Resume ↗
+          Resume
         </a>
 
         <a
