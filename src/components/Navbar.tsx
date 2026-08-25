@@ -163,15 +163,6 @@ return (
           Projects
         </a>
 
-        {/* RESUME */}
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Resume
-        </a>
-
         <a
           href="#experience"
           className={
@@ -188,6 +179,14 @@ return (
           onClick={closeMenu}
         >
           Contact
+        </a>
+        {/* RESUME */}
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
         </a>
       </div>
 

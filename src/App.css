@@ -286,6 +286,9 @@
 }
 
 .hero-small {
+  
+  margin-top: 20px;
+
   margin-bottom: 20px;
 
   color: #a78bfa;
@@ -2046,7 +2049,7 @@
   right: -10%;
   bottom: 0;
 
-  width: 400 px;
+  width: 50%;
 
   z-index: 3;
 
@@ -2798,5 +2801,81 @@
 
   .certificate-details h2 {
     font-size: 30px;
+  }
+}
+
+
+/* =========================
+   VIEW MORE CERTIFICATES
+========================= */
+
+.certificates-view-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 55px;
+}
+
+.view-more-certificates {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  min-width: 170px;
+  padding: 14px 26px;
+
+  border: 1px solid rgba(139, 92, 246, 0.45);
+  border-radius: 30px;
+
+  background: rgba(139, 92, 246, 0.08);
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.view-more-certificates span {
+  color: #8b5cf6;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.view-more-certificates:hover {
+  background: rgba(139, 92, 246, 0.16);
+  border-color: #8b5cf6;
+
+  box-shadow:
+    0 0 25px rgba(139, 92, 246, 0.18);
+
+  transform: translateY(-3px);
+}
+
+.view-more-certificates:hover span {
+  transform: translateY(3px);
+}
+
+
+/* =========================
+   VIEW MORE MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .certificates-view-more {
+    margin-top: 40px;
+  }
+
+  .view-more-certificates {
+    min-width: 160px;
+    padding: 13px 22px;
   }
 }
