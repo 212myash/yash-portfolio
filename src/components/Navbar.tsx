@@ -57,10 +57,75 @@ const Navbar = () => {
   };
 
 return (
-  <nav className="navbar">
+  <nav className={`navbar ${activeSection === "" ? "hero-active" : ""}`}>
     <a href="/" className="nav-logo">
-      <img src="/image/Logo1.png" alt="Yash Raj" />
-    </a>
+  <span className="logo-text">
+    YASH<span>.</span>
+  </span>
+
+  <svg
+    className="logo-snake"
+    viewBox="0 0 180 90"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <linearGradient
+        id="logoSnakeGradient"
+        x1="20"
+        y1="45"
+        x2="165"
+        y2="45"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
+        <stop offset="18%" stopColor="#8b5cf6" stopOpacity="1" />
+        <stop offset="45%" stopColor="#8b5cf6" stopOpacity="0.9" />
+        <stop offset="75%" stopColor="#8b5cf6" stopOpacity="0.45" />
+        <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0" />
+      </linearGradient>
+
+      <filter id="logoGlow">
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+
+    <path
+      className="logo-snake-glow"
+      d="M18 52
+         C30 25, 55 18, 78 30
+         C101 42, 108 68, 130 70
+         C150 72, 160 57, 166 38"
+      stroke="url(#logoSnakeGradient)"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      filter="url(#logoGlow)"
+    />
+
+    <path
+      className="logo-snake-line"
+      d="M18 52
+         C30 25, 55 18, 78 30
+         C101 42, 108 68, 130 70
+         C150 72, 160 57, 166 38"
+      stroke="url(#logoSnakeGradient)"
+      strokeWidth="1.2"
+      strokeLinecap="round"
+    />
+
+    <circle
+      className="logo-light"
+      cx="18"
+      cy="52"
+      r="3"
+      fill="#a78bfa"
+    />
+  </svg>
+</a>
 
       {/* DESKTOP MENU */}
       <div className="nav-links">

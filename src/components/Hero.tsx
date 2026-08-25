@@ -106,14 +106,31 @@ const Hero = () => {
         </p>
 
         <div className="hero-buttons">
-          <a href="#projects" className="primary-button">
-            View My Work
-          </a>
 
-          <a href="#contact" className="secondary-button">
-            Contact Me
-          </a>
-        </div>
+  <a
+    href="#projects"
+    className="hero-btn hero-work"
+  >
+    View My Work
+  </a>
+
+  <a
+    href="/resume.pdf"
+    className="hero-btn hero-resume"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Download Resume
+  </a>
+
+  <a
+    href="#contact"
+    className="hero-btn hero-contact"
+  >
+    Contact Me
+  </a>
+
+</div>
       </div>
 
       {/* 2D CHARACTER */}
