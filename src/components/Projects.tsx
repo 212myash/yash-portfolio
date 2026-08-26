@@ -1,7 +1,20 @@
 import ScrollReveal from "./ScrollReveal";
 
+interface Project {
+  number: string;
+  title: string;
+  description: string;
+  tech: string;
+  type: string;
+
+  status: "live" | "working";
+
+  liveLink: string;
+  githubLink: string;
+}
+
 const Projects = () => {
-  const projects = [
+  const projects: Project[] = [
     {
       number: "01",
       title: "Railway Reservation System",
@@ -9,6 +22,9 @@ const Projects = () => {
         "A C++ based railway reservation system using OOP, DSA, vectors and file handling. Includes seat booking and waiting list management.",
       tech: "C++ • DSA • OOP • File Handling",
       type: "SDP PROJECT",
+      status: "working",
+      liveLink: "",
+      githubLink: "",
     },
 
     {
@@ -18,6 +34,9 @@ const Projects = () => {
         "A web-based restaurant management project designed to manage restaurant-related information with a clean and simple interface.",
       tech: "HTML • CSS • JavaScript",
       type: "WEB PROJECT",
+      status: "live",
+      liveLink: "",
+      githubLink: "",
     },
 
     {
@@ -27,6 +46,9 @@ const Projects = () => {
         "A travel-focused application project presented at Science City, designed around exploring Sanskrit and cultural experiences.",
       tech: "Dart • Flutter",
       type: "APP PROJECT",
+      status: "live",
+      liveLink: "",
+      githubLink: "",
     },
 
     {
@@ -36,6 +58,9 @@ const Projects = () => {
         "A health monitoring application concept that uses health information and Google Fit data to provide useful health insights.",
       tech: "App Development • Google Fit",
       type: "APP PROJECT",
+      status: "working",
+      liveLink: "",
+      githubLink: "",
     },
 
     {
@@ -45,6 +70,9 @@ const Projects = () => {
         "A responsive website created for a computer institute to present courses, information and institute-related content.",
       tech: "HTML • CSS • JavaScript",
       type: "WEB PROJECT",
+      status: "working",
+      liveLink: "https://sci-zeta.vercel.app/",
+      githubLink: "https://github.com/212myash/institute-project.git",
     },
 
     {
@@ -54,6 +82,9 @@ const Projects = () => {
         "A real-time process monitoring dashboard designed to monitor and display system process information in an organized interface.",
       tech: "Python",
       type: "PYTHON PROJECT",
+      status: "live",
+      liveLink: "",
+      githubLink: "",
     },
 
     {
@@ -63,6 +94,9 @@ const Projects = () => {
         "A project focused on analyzing lecture-related information dynamically and presenting useful results through an interactive interface.",
       tech: "JavaScript",
       type: "WEB PROJECT",
+      status: "working",
+      liveLink: "",
+      githubLink: "",
     },
 
     {
@@ -72,6 +106,9 @@ const Projects = () => {
         "An AI-focused payroll and expense management project designed to organize employee payroll information and manage business expenses.",
       tech: "JavaScript",
       type: "AI / WEB PROJECT",
+      status: "working",
+      liveLink: "",
+      githubLink: "",
     },
 
     {
@@ -81,29 +118,43 @@ const Projects = () => {
         "A mobile application project designed around a modern shopping and marketplace experience.",
       tech: "Dart • Flutter",
       type: "APP PROJECT",
+      status: "working",
+      liveLink: "",
+      githubLink: "",
     },
 
     {
-  number: "10",
-  title: "Portfolio",
-  description:
-    "A modern personal portfolio website showcasing my skills, projects, certifications and development experience.",
-  tech: "React • TypeScript • CSS",
-  type: "PERSONAL PROJECT",
-},
+      number: "10",
+      title: "Portfolio",
+      description:
+        "A modern personal portfolio website showcasing my skills, projects, certifications and development experience.",
+      tech: "React • TypeScript • CSS",
+      type: "PERSONAL PROJECT",
+      status: "live",
+      liveLink: "",
+      githubLink: "",
+    },
   ];
 
   return (
     <ScrollReveal>
       <section className="projects" id="projects">
-        
-        {/* SECTION LABEL */}
+
+        {/* =========================
+            SECTION LABEL
+        ========================= */}
+
         <div className="section-label">
           SELECTED WORK
         </div>
 
-        {/* HEADING */}
+
+        {/* =========================
+            HEADING
+        ========================= */}
+
         <div className="projects-heading">
+
           <h2>
             Things I've
             <span> built.</span>
@@ -113,45 +164,176 @@ const Projects = () => {
             A collection of projects I've worked on while learning,
             experimenting and solving real-world problems with technology.
           </p>
+
         </div>
 
-        {/* PROJECT LIST */}
+
+        {/* =========================
+            PROJECT LIST
+        ========================= */}
+
         <div className="projects-list">
+
           {projects.map((project) => (
+
             <article
-              className="project-card"
+              className={`project-card ${
+                project.status === "live"
+                  ? "project-live"
+                  : "project-working"
+              }`}
               key={project.number}
             >
-              {/* NUMBER */}
+
+              {/* =========================
+                  NUMBER
+              ========================= */}
+
               <div className="project-number">
                 {project.number}
               </div>
 
-              {/* PROJECT CONTENT */}
+
+              {/* =========================
+                  MAIN CONTENT
+              ========================= */}
+
               <div className="project-main">
-                <p className="project-type">
-                  {project.type}
-                </p>
+
+                {/* TYPE + STATUS */}
+
+                <div className="project-meta">
+
+                  <p className="project-type">
+                    {project.type}
+                  </p>
+
+                  <span
+                    className={`project-status ${
+                      project.status === "live"
+                        ? "status-live"
+                        : "status-working"
+                    }`}
+                  >
+
+                    <span className="project-status-dot"></span>
+
+                    {project.status === "live"
+                      ? "LIVE"
+                      : "CURRENTLY WORKING"}
+
+                  </span>
+
+                </div>
+
+
+                {/* TITLE */}
 
                 <h3>
                   {project.title}
                 </h3>
 
+
+                {/* DESCRIPTION */}
+
                 <p className="project-description">
                   {project.description}
                 </p>
 
+
+                {/* TECHNOLOGY */}
+
                 <p className="project-tech">
                   {project.tech}
                 </p>
+
+
+                {/* =========================
+                    PROJECT BUTTONS
+                ========================= */}
+
+                {/* =========================
+    PROJECT BUTTONS
+========================= */}
+
+<div className="project-links">
+
+  {/* LIVE DEMO / CURRENTLY WORKING */}
+
+  {project.status === "live" ? (
+    <a
+      href={project.liveLink || "#"}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="project-btn project-btn-live"
+      onClick={(event) => {
+        if (!project.liveLink) {
+          event.preventDefault();
+        }
+      }}
+    >
+      <span>Live Demo</span>
+
+      <span className="project-btn-arrow">
+        ↗
+      </span>
+    </a>
+  ) : (
+    <a
+      href={project.githubLink || "#"}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="project-btn project-btn-working"
+      onClick={(event) => {
+        if (!project.githubLink) {
+          event.preventDefault();
+        }
+      }}
+    >
+      <span className="project-working-dot"></span>
+
+      <span>Currently Working</span>
+
+      <span className="project-btn-arrow">
+        ↗
+      </span>
+    </a>
+  )}
+
+
+  {/* GITHUB */}
+
+  <a
+    href={project.githubLink || "#"}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="project-btn project-btn-github"
+    onClick={(event) => {
+      if (!project.githubLink) {
+        event.preventDefault();
+      }
+    }}
+  >
+    <span className="github-icon">
+      {"</>"}
+    </span>
+
+    <span>GitHub</span>
+
+    <span className="project-btn-arrow">
+      ↗
+    </span>
+  </a>
+
+</div>
+
               </div>
 
-              {/* ARROW */}
-              <div className="project-arrow">
-                ↗
-              </div>
+
             </article>
+
           ))}
+
         </div>
 
       </section>
