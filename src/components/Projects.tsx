@@ -28,8 +28,8 @@ const Projects = () => {
       status: "working",
 
       liveLink: "",
-      workingLink: "",
-      githubLink: "",
+      workingLink: "https://github.com/212myash/RailwayReservationSystem.git",
+      githubLink: "https://github.com/212myash/RailwayReservationSystem.git",
     },
 
     {
@@ -42,8 +42,8 @@ const Projects = () => {
       status: "live",
 
       liveLink: "",
-      workingLink: "",
-      githubLink: "",
+      workingLink: "https://github.com/212myash/restaurant-ordering-system.git",
+      githubLink: "https://github.com/212myash/restaurant-ordering-system.git",
     },
 
     {
@@ -56,8 +56,8 @@ const Projects = () => {
       status: "live",
 
       liveLink: "",
-      workingLink: "",
-      githubLink: "",
+      workingLink: "https://github.com/212myash/Sanskriti_Yatra.git",
+      githubLink: "https://github.com/212myash/Sanskriti_Yatra.git",
     },
 
     {
@@ -70,8 +70,8 @@ const Projects = () => {
       status: "working",
 
       liveLink: "",
-      workingLink: "",
-      githubLink: "",
+      workingLink: "https://github.com/Biswajeet111/SwasthCare.git",
+      githubLink: "https://github.com/Biswajeet111/SwasthCare.git",
     },
 
     {
@@ -98,8 +98,8 @@ const Projects = () => {
       status: "live",
 
       liveLink: "",
-      workingLink: "",
-      githubLink: "",
+      workingLink: "https://github.com/212myash/The-Real-Time-Process-Monitoring-Dashboard.git",
+      githubLink: "https://github.com/212myash/The-Real-Time-Process-Monitoring-Dashboard.git",
     },
 
     {
@@ -141,7 +141,7 @@ const Projects = () => {
 
       liveLink: "",
       workingLink: "",
-      githubLink: "",
+      githubLink: "https://github.com/212myash/bazario.git",
     },
 
     {
@@ -153,8 +153,8 @@ const Projects = () => {
       type: "PERSONAL PROJECT",
       status: "live",
 
-      liveLink: "https://yash-portfolio-six-liart.vercel.app/",
-      workingLink: "",
+      liveLink: "https://yash-portfolio-six-liart.vercel.app",
+      workingLink: "https://yash-portfolio-six-liart.vercel.app",
       githubLink: "https://github.com/212myash/yash-portfolio",
     },
   ];
