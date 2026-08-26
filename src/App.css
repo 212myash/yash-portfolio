@@ -28,7 +28,6 @@
   z-index: 1000;
 }
 
-
 /* =========================
    NAV LOGO
 ========================= */
@@ -67,7 +66,6 @@
   color: #8b5cf6;
 }
 
-
 /* =========================
    PURPLE SNAKE LIGHT
 ========================= */
@@ -90,7 +88,6 @@
   z-index: 1;
 }
 
-
 /* Main smooth line */
 
 .logo-snake-line {
@@ -99,7 +96,6 @@
 
   animation: logoSnakeMove 4s linear infinite;
 }
-
 
 /* Soft glow behind line */
 
@@ -114,16 +110,13 @@
     logoSnakeGlow 2.5s ease-in-out infinite;
 }
 
-
 /* Starting purple light */
 
 .logo-light {
-  filter: drop-shadow(0 0 5px #8b5cf6)
-          drop-shadow(0 0 12px #8b5cf6);
+  filter: drop-shadow(0 0 5px #8b5cf6) drop-shadow(0 0 12px #8b5cf6);
 
   animation: logoLightPulse 2s ease-in-out infinite;
 }
-
 
 /* =========================
    ANIMATIONS
@@ -139,7 +132,6 @@
   }
 }
 
-
 @keyframes logoSnakeGlow {
   0%,
   100% {
@@ -150,7 +142,6 @@
     opacity: 0.8;
   }
 }
-
 
 @keyframes logoLightPulse {
   0%,
@@ -216,7 +207,6 @@
   box-shadow: 0 0 10px rgba(139, 92, 246, 0.8);
 }
 
-
 /* =========================
    RESUME
 ========================= */
@@ -230,7 +220,6 @@
 
   background: transparent;
 }
-
 
 /* =========================
    LET'S TALK BUTTON
@@ -286,7 +275,6 @@
 }
 
 .hero-small {
-  
   margin-top: 20px;
 
   margin-bottom: 20px;
@@ -412,7 +400,6 @@
   transform: translateY(-3px);
 }
 
-
 /* =========================
    MOBILE
 ========================= */
@@ -429,7 +416,6 @@
     font-size: 14px;
   }
 }
-
 
 /* =========================
    BACKGROUND GLOW
@@ -462,7 +448,6 @@
   background: rgba(59, 130, 246, 0.12);
 }
 
-
 /* =========================
    SCROLL INDICATOR
 ========================= */
@@ -494,7 +479,6 @@
   background: #777777;
 }
 
-
 /* =========================
    MOBILE RESPONSIVE
 ========================= */
@@ -504,7 +488,6 @@
 ========================= */
 
 @media (max-width: 900px) {
-
   .hero {
     min-height: 100vh;
 
@@ -667,13 +650,11 @@
   font-size: 13px;
 }
 
-
 /* =========================
    ABOUT MOBILE
 ========================= */
 
 @media (max-width: 768px) {
-
   .about {
     padding: 100px 7%;
   }
@@ -693,7 +674,6 @@
   }
 }
 
-
 /* =========================
    SKILLS SECTION
 ========================= */
@@ -708,7 +688,6 @@
 
   color: #ffffff;
 }
-
 
 /* =========================
    MAIN HEADING
@@ -756,7 +735,6 @@
   line-height: 1.7;
 }
 
-
 /* =========================
    CATEGORY SECTION
 ========================= */
@@ -768,7 +746,6 @@
 .skill-category-section {
   margin-bottom: 95px;
 }
-
 
 /* =========================
    CATEGORY HEADER
@@ -787,7 +764,6 @@
 
   border-bottom: 1px solid #242428;
 }
-
 
 /* LEFT */
 
@@ -831,7 +807,6 @@
   letter-spacing: -0.3px;
 }
 
-
 /* RIGHT */
 
 .skill-category-meta {
@@ -858,7 +833,6 @@
   letter-spacing: 2px;
 }
 
-
 /* =========================
    SKILLS GRID
 ========================= */
@@ -874,7 +848,6 @@
 
   border: 1px solid #252529;
 }
-
 
 /* =========================
    SKILL CARD
@@ -910,7 +883,6 @@
   transform: translateY(-2px);
 }
 
-
 /* =========================
    PURPLE SIDE LINE
 ========================= */
@@ -937,7 +909,6 @@
   height: 100%;
 }
 
-
 /* =========================
    NUMBER
 ========================= */
@@ -953,7 +924,6 @@
 
   font-size: 12px;
 }
-
 
 /* =========================
    CONTENT
@@ -995,7 +965,6 @@
   text-transform: uppercase;
 }
 
-
 /* =========================
    IMAGE BOX
 ========================= */
@@ -1031,7 +1000,6 @@
   transform: scale(1.05);
 }
 
-
 /* =========================
    IMAGE
 ========================= */
@@ -1056,7 +1024,6 @@
 ========================= */
 
 @media (max-width: 1000px) {
-
   .skills {
     padding: 120px 7%;
   }
@@ -1076,17 +1043,14 @@
   }
 }
 
-
 /* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 768px) {
-
   .skills {
     padding: 100px 6%;
   }
-
 
   /* HEADING */
 
@@ -1111,7 +1075,6 @@
 
     max-width: 100%;
   }
-
 
   /* CATEGORY */
 
@@ -1149,7 +1112,6 @@
     font-size: 8px;
   }
 
-
   /* CARDS */
 
   .skills-grid {
@@ -1178,7 +1140,6 @@
     font-size: 9px;
   }
 
-
   /* ICON */
 
   .skill-image-box {
@@ -1194,13 +1155,11 @@
   }
 }
 
-
 /* =========================
    SMALL MOBILE
 ========================= */
 
 @media (max-width: 420px) {
-
   .skills {
     padding: 85px 5%;
   }
@@ -1223,48 +1182,41 @@
     font-size: 17px;
   }
 }
-
-/* =========================
+/* =========================================================
    PROJECTS SECTION
-========================= */
+========================================================= */
 
 .projects {
   position: relative;
   min-height: 100vh;
-
   padding: 140px 10%;
-
   background: #0b0b0d;
-
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 
-/* =========================
+/* =========================================================
    PROJECTS HEADING
-========================= */
+========================================================= */
 
 .projects-heading {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-
   gap: 50px;
-
   margin-bottom: 75px;
 }
 
 .projects-heading h2 {
   max-width: 650px;
-
   margin: 0;
 
   color: #ffffff;
 
   font-size: clamp(45px, 5vw, 75px);
+  font-weight: 500;
 
   line-height: 1;
-
   letter-spacing: -3px;
 }
 
@@ -1274,20 +1226,18 @@
 
 .projects-heading > p {
   max-width: 400px;
-
   margin: 0;
 
   color: #777777;
 
   font-size: 16px;
-
   line-height: 1.7;
 }
 
 
-/* =========================
+/* =========================================================
    PROJECT LIST
-========================= */
+========================================================= */
 
 .projects-list {
   display: flex;
@@ -1297,15 +1247,14 @@
 }
 
 
-/* =========================
+/* =========================================================
    PROJECT CARD
-========================= */
+========================================================= */
 
 .project-card {
   position: relative;
 
   display: grid;
-
   grid-template-columns: 70px minmax(0, 1fr) 50px;
 
   align-items: center;
@@ -1320,16 +1269,17 @@
 
   overflow: hidden;
 
+  background: transparent;
+
   transition:
     background 0.4s ease,
-    transform 0.4s ease,
     border-color 0.4s ease;
 }
 
 
-/* =========================
-   HOVER BACKGROUND
-========================= */
+/* =========================================================
+   CARD HOVER BACKGROUND
+========================================================= */
 
 .project-card::before {
   content: "";
@@ -1342,13 +1292,12 @@
   width: 100%;
   height: 0;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(139, 92, 246, 0.09),
-      rgba(139, 92, 246, 0.02),
-      transparent
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(139, 92, 246, 0.09),
+    rgba(139, 92, 246, 0.03),
+    transparent
+  );
 
   transition: height 0.45s ease;
 
@@ -1360,9 +1309,9 @@
 }
 
 
-/* =========================
-   LEFT PURPLE LINE
-========================= */
+/* =========================================================
+   PURPLE LEFT LINE
+========================================================= */
 
 .project-card::after {
   content: "";
@@ -1378,6 +1327,8 @@
   background: #8b5cf6;
 
   transition: height 0.45s ease;
+
+  pointer-events: none;
 }
 
 .project-card:hover::after {
@@ -1385,20 +1336,19 @@
 }
 
 
-/* =========================
-   CARD CONTENT LAYER
-========================= */
+/* =========================================================
+   CONTENT LAYER
+========================================================= */
 
 .project-card > * {
   position: relative;
-
   z-index: 2;
 }
 
 
-/* =========================
+/* =========================================================
    PROJECT NUMBER
-========================= */
+========================================================= */
 
 .project-number {
   align-self: flex-start;
@@ -1408,9 +1358,7 @@
   color: #555555;
 
   font-size: 13px;
-
   font-family: monospace;
-
   letter-spacing: 1px;
 
   transition:
@@ -1420,40 +1368,36 @@
 
 .project-card:hover .project-number {
   color: #8b5cf6;
-
   transform: translateX(4px);
 }
 
 
-/* =========================
+/* =========================================================
    PROJECT MAIN
-========================= */
+========================================================= */
 
 .project-main {
   min-width: 0;
 }
 
 
-/* =========================
+/* =========================================================
    PROJECT META
-========================= */
+========================================================= */
 
 .project-meta {
   display: flex;
-
   align-items: center;
-
   gap: 15px;
-
   flex-wrap: wrap;
 
   margin-bottom: 13px;
 }
 
 
-/* =========================
+/* =========================================================
    PROJECT TYPE
-========================= */
+========================================================= */
 
 .project-type {
   margin: 0;
@@ -1461,24 +1405,21 @@
   color: #8b5cf6;
 
   font-size: 10px;
-
   font-weight: 700;
 
   letter-spacing: 2px;
-
   text-transform: uppercase;
 }
 
 
-/* =========================
+/* =========================================================
    STATUS BADGE
-========================= */
+========================================================= */
 
 .project-status {
   display: inline-flex;
 
   align-items: center;
-
   gap: 7px;
 
   padding: 5px 10px;
@@ -1488,7 +1429,6 @@
   border-radius: 999px;
 
   font-size: 9px;
-
   font-weight: 700;
 
   letter-spacing: 1.3px;
@@ -1497,7 +1437,9 @@
 }
 
 
-/* LIVE */
+/* =========================================================
+   LIVE STATUS
+========================================================= */
 
 .status-live {
   color: #b9f6ca;
@@ -1508,7 +1450,9 @@
 }
 
 
-/* WORKING */
+/* =========================================================
+   WORKING STATUS
+========================================================= */
 
 .status-working {
   color: #f0d99a;
@@ -1519,7 +1463,9 @@
 }
 
 
-/* STATUS DOT */
+/* =========================================================
+   STATUS DOT
+========================================================= */
 
 .project-status-dot {
   width: 6px;
@@ -1533,9 +1479,9 @@
 }
 
 
-/* =========================
+/* =========================================================
    PROJECT TITLE
-========================= */
+========================================================= */
 
 .project-main h3 {
   margin: 0 0 14px;
@@ -1543,7 +1489,6 @@
   color: #ffffff;
 
   font-size: clamp(26px, 3vw, 42px);
-
   font-weight: 500;
 
   line-height: 1.15;
@@ -1557,14 +1502,13 @@
 
 .project-card:hover .project-main h3 {
   color: #ffffff;
-
   transform: translateX(7px);
 }
 
 
-/* =========================
-   DESCRIPTION
-========================= */
+/* =========================================================
+   PROJECT DESCRIPTION
+========================================================= */
 
 .project-description {
   max-width: 720px;
@@ -1574,14 +1518,13 @@
   color: #888888;
 
   font-size: 15px;
-
   line-height: 1.75;
 }
 
 
-/* =========================
-   TECHNOLOGY
-========================= */
+/* =========================================================
+   PROJECT TECHNOLOGY
+========================================================= */
 
 .project-tech {
   margin: 0;
@@ -1591,14 +1534,13 @@
   font-size: 11px;
 
   letter-spacing: 1px;
-
   line-height: 1.6;
 }
 
 
-/* =========================
-   PROJECT LINKS
-========================= */
+/* =========================================================
+   PROJECT BUTTON CONTAINER
+========================================================= */
 
 .project-links {
   display: flex;
@@ -1613,33 +1555,31 @@
 }
 
 
-/* =========================
-   COMMON BUTTON
-========================= */
+/* =========================================================
+   COMMON PROJECT BUTTON
+========================================================= */
 
 .project-btn {
   display: inline-flex;
 
   align-items: center;
-
   justify-content: center;
 
   gap: 9px;
 
-  min-height: 42px;
+  min-height: 44px;
 
-  padding: 0 16px;
+  padding: 0 17px;
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.14);
 
-  border-radius: 4px;
+  border-radius: 6px;
 
   color: #ffffff;
 
   background: rgba(255, 255, 255, 0.025);
 
   font-size: 11px;
-
   font-weight: 600;
 
   letter-spacing: 0.8px;
@@ -1648,144 +1588,117 @@
 
   white-space: nowrap;
 
+  cursor: pointer;
+
   transition:
     background 0.3s ease,
     border-color 0.3s ease,
     color 0.3s ease,
-    transform 0.3s ease;
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 
-/* =========================
+/* =========================================================
    LIVE DEMO BUTTON
-========================= */
+========================================================= */
 
 .project-btn-live {
+  color: #ffffff;
+
   background: #8b5cf6;
 
   border-color: #8b5cf6;
 
-  color: #ffffff;
+  box-shadow:
+    0 6px 20px rgba(139, 92, 246, 0.12);
 }
 
 .project-btn-live:hover {
+  color: #ffffff;
+
   background: #9d73f7;
 
   border-color: #9d73f7;
 
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 30px rgba(139, 92, 246, 0.25);
 }
 
 
-/* =========================
-   GITHUB BUTTON
-========================= */
-
-.project-btn-github {
-  background: transparent;
-
-  border-color: rgba(255, 255, 255, 0.16);
-
-  color: #dddddd;
-}
-
-.project-btn-github:hover {
-  background: rgba(255, 255, 255, 0.07);
-
-  border-color: rgba(255, 255, 255, 0.35);
-
-  color: #ffffff;
-
-  transform: translateY(-2px);
-}
-
-
-/* =========================
-   GITHUB ICON
-========================= */
-
-.github-icon {
-  font-family: monospace;
-
-  font-size: 12px;
-
-  color: #8b5cf6;
-}
-
-
-/* =========================
-   BUTTON ARROW
-========================= */
-
-.project-btn-arrow {
-  font-size: 15px;
-
-  line-height: 1;
-
-  transition: transform 0.3s ease;
-}
-
-.project-btn:hover .project-btn-arrow {
-  transform: translate(3px, -3px);
-}
-
-
-/* =========================
-   DISABLED BUTTON
-========================= */
-
-.project-btn-disabled {
-  opacity: 0.35;
-
-  cursor: default;
-
-  pointer-events: auto;
-}
-
-.project-btn-disabled:hover {
-  transform: none;
-
-  background: transparent;
-
-  border-color: rgba(255, 255, 255, 0.12);
-}
-
-
-/* Live disabled should retain subtle purple */
-
-.project-btn-live.project-btn-disabled {
-  background: rgba(139, 92, 246, 0.25);
-
-  border-color: rgba(139, 92, 246, 0.3);
-}
-
-.project-btn-live.project-btn-disabled:hover {
-  background: rgba(139, 92, 246, 0.25);
-
-  border-color: rgba(139, 92, 246, 0.3);
-}
-
-
-/* =========================
+/* =========================================================
    CURRENTLY WORKING BUTTON
-========================= */
+========================================================= */
 
 .project-btn-working {
-  color: #aaa9b2;
+  display: inline-flex;
 
-  background: rgba(255, 255, 255, 0.025);
+  align-items: center;
+  justify-content: center;
 
-  border-color: rgba(255, 255, 255, 0.1);
+  gap: 9px;
 
-  cursor: default;
+  min-height: 44px;
+
+  padding: 0 17px;
+
+  color: #f3d978;
+
+  background: rgba(250, 204, 21, 0.055);
+
+  border: 1px solid rgba(250, 204, 21, 0.22);
+
+  border-radius: 6px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.8px;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 
-/* Working dot */
+/* =========================================================
+   CURRENTLY WORKING HOVER
+========================================================= */
+
+.project-btn-working:hover {
+  color: #ffffff;
+
+  background: rgba(250, 204, 21, 0.12);
+
+  border-color: rgba(250, 204, 21, 0.45);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 30px rgba(250, 204, 21, 0.12);
+}
+
+
+/* =========================================================
+   WORKING DOT
+========================================================= */
 
 .project-working-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
 
   border-radius: 50%;
 
@@ -1793,18 +1706,130 @@
 
   box-shadow:
     0 0 0 3px rgba(250, 204, 21, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-btn-working:hover .project-working-dot {
+  transform: scale(1.25);
+
+  box-shadow:
+    0 0 0 4px rgba(250, 204, 21, 0.12),
+    0 0 14px rgba(250, 204, 21, 0.5);
 }
 
 
-/* =========================
-   RIGHT ARROW
-========================= */
+/* =========================================================
+   GITHUB BUTTON
+========================================================= */
 
-.project-arrow {
-  align-self: flex-start;
+.project-btn-github {
+  color: #dddddd;
 
-  padding-top: 3px;
+  background: rgba(255, 255, 255, 0.025);
 
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.project-btn-github:hover {
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.075);
+
+  border-color: rgba(255, 255, 255, 0.38);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   GITHUB ICON
+========================================================= */
+
+.github-icon {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #8b5cf6;
+
+  font-family: monospace;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   BUTTON ARROW
+========================================================= */
+
+.project-btn-arrow {
+  display: inline-block;
+
+  color: currentColor;
+
+  font-size: 15px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.project-btn:hover .project-btn-arrow {
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   OPTIONAL DISABLED STATE
+   Sirf tab use hoga jab link empty ho aur JSX
+   project-btn-disabled class lagaye.
+========================================================= */
+
+.project-btn-disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+}
+
+.project-btn-disabled:hover {
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   CARD STATUS STYLING
+========================================================= */
+
+/* IMPORTANT:
+   Working project ko poora fade nahi karna hai.
+*/
+
+.project-working {
+  opacity: 1;
+}
+
+.project-live {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   PROJECT RIGHT ARROW
+========================================================= */
+
+.project-card > .project-arrow {
   color: #555555;
 
   font-size: 28px;
@@ -1814,34 +1839,16 @@
     transform 0.3s ease;
 }
 
-.project-card:hover .project-arrow {
+.project-card:hover > .project-arrow {
   color: #ffffff;
 
   transform: translate(5px, -5px);
 }
 
 
-/* =========================
-   LIVE PROJECT CARD
-========================= */
-
-.project-live:hover {
-  border-color: rgba(139, 92, 246, 0.25);
-}
-
-
-/* =========================
-   WORKING PROJECT CARD
-========================= */
-
-.project-working {
-  opacity: 0.92;
-}
-
-
-/* =========================
+/* =========================================================
    TABLET
-========================= */
+========================================================= */
 
 @media (max-width: 1000px) {
 
@@ -1850,19 +1857,21 @@
   }
 
   .project-card {
-    grid-template-columns: 55px minmax(0, 1fr) 35px;
+    grid-template-columns:
+      55px
+      minmax(0, 1fr)
+      35px;
 
     gap: 20px;
 
     padding: 40px 15px;
   }
-
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 768px) {
 
@@ -1897,7 +1906,9 @@
   /* CARD */
 
   .project-card {
-    grid-template-columns: 35px minmax(0, 1fr);
+    grid-template-columns:
+      35px
+      minmax(0, 1fr);
 
     gap: 15px;
 
@@ -1959,27 +1970,29 @@
     width: 100%;
 
     margin-top: 22px;
+
+    gap: 9px;
   }
 
-  .project-btn {
+  .project-btn,
+  .project-btn-working {
     width: 100%;
 
-    min-height: 44px;
+    min-height: 46px;
   }
 
 
   /* RIGHT ARROW */
 
-  .project-arrow {
+  .project-card > .project-arrow {
     display: none;
   }
-
 }
 
 
-/* =========================
+/* =========================================================
    SMALL MOBILE
-========================= */
+========================================================= */
 
 @media (max-width: 480px) {
 
@@ -1992,7 +2005,9 @@
   }
 
   .project-card {
-    grid-template-columns: 28px minmax(0, 1fr);
+    grid-template-columns:
+      28px
+      minmax(0, 1fr);
 
     gap: 12px;
 
@@ -2013,8 +2028,13 @@
     padding: 5px 8px;
   }
 
-}
+  .project-btn,
+  .project-btn-working {
+    font-size: 10px;
 
+    min-height: 44px;
+  }
+}
 
 /* =========================
    EXPERIENCE SECTION
@@ -2031,7 +2051,6 @@
 
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
-
 
 /* =========================
    EXPERIENCE HEADING
@@ -2075,7 +2094,6 @@
   line-height: 1.7;
 }
 
-
 /* =========================
    EXPERIENCE CARD
 ========================= */
@@ -2106,7 +2124,6 @@
   transform: translateY(-5px);
 }
 
-
 /* Purple line on hover */
 
 .experience-card::before {
@@ -2130,7 +2147,6 @@
 .experience-card:hover::before {
   height: 100%;
 }
-
 
 /* =========================
    EXPERIENCE DATE
@@ -2165,7 +2181,6 @@
 
   line-height: 1.6;
 }
-
 
 /* =========================
    EXPERIENCE MAIN
@@ -2205,7 +2220,6 @@
   font-weight: 400;
 }
 
-
 /* =========================
    EXPERIENCE DESCRIPTION
 ========================= */
@@ -2221,7 +2235,6 @@
 
   line-height: 1.8;
 }
-
 
 /* =========================
    RESPONSIBILITIES
@@ -2265,7 +2278,6 @@
   font-size: 18px;
 }
 
-
 /* =========================
    TECHNOLOGY TAGS
 ========================= */
@@ -2302,13 +2314,11 @@
   background: rgba(139, 92, 246, 0.08);
 }
 
-
 /* =========================
    EXPERIENCE MOBILE
 ========================= */
 
 @media (max-width: 768px) {
-
   .experience {
     padding: 100px 7%;
   }
@@ -2490,13 +2500,11 @@
   transform: translate(4px, -4px);
 }
 
-
 /* =========================
    EXPERIENCE + EDUCATION MOBILE
 ========================= */
 
 @media (max-width: 768px) {
-
   .experience,
   .education {
     padding: 100px 7%;
@@ -2543,7 +2551,6 @@
     display: none;
   }
 }
-
 
 /* =========================
    CONTACT SECTION
@@ -2627,7 +2634,6 @@
   line-height: 1.8;
 }
 
-
 /* =========================
    CONTACT LINKS
 ========================= */
@@ -2692,7 +2698,6 @@
 
   transform: translate(5px, -5px);
 }
-
 
 /* =========================
    FOOTER
@@ -2762,13 +2767,11 @@
   color: #ffffff;
 }
 
-
 /* =========================
    CONTACT + FOOTER MOBILE
 ========================= */
 
 @media (max-width: 768px) {
-
   .contact {
     padding: 100px 7%;
   }
@@ -2838,7 +2841,6 @@
   height: auto;
 }
 
-
 /* =========================
    TABLET
 ========================= */
@@ -2874,8 +2876,6 @@
   }
 }
 
-
-
 /* =========================
    MOBILE MENU BUTTON
 ========================= */
@@ -2905,7 +2905,6 @@
   transition: 0.3s ease;
 }
 
-
 /* =========================
    MOBILE DROPDOWN
 ========================= */
@@ -2914,13 +2913,11 @@
   display: none;
 }
 
-
 /* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 768px) {
-
   .navbar {
     position: relative;
     padding: 18px 20px;
@@ -3000,7 +2997,6 @@
     color: #ffffff !important;
   }
 
-
   /* Hamburger animation */
 
   .menu-button.active span:nth-child(1) {
@@ -3028,7 +3024,6 @@
 
   background: #080808;
 }
-
 
 /* =========================
    CERTIFICATE HEADING
@@ -3072,7 +3067,6 @@
   line-height: 1.7;
 }
 
-
 /* =========================
    CERTIFICATE GRID
 ========================= */
@@ -3085,7 +3079,6 @@
   gap: 24px;
 }
 
-
 /* =========================
    CERTIFICATE CARD
 ========================= */
@@ -3095,7 +3088,7 @@
 
   padding: 0;
 
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 
   background: #0b0b0d;
 
@@ -3118,10 +3111,8 @@
 
   border-color: rgba(139, 92, 246, 0.6);
 
-  box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
-
 
 /* =========================
    CERTIFICATE PREVIEW
@@ -3155,18 +3146,15 @@
     filter 0.6s ease;
 }
 
-.certificate-card-new:hover
-.certificate-preview-new img {
+.certificate-card-new:hover .certificate-preview-new img {
   transform: scale(1.06);
 
   filter: brightness(0.65);
 }
 
-.certificate-card-new:hover
-.certificate-preview-new iframe {
+.certificate-card-new:hover .certificate-preview-new iframe {
   transform: scale(1.04);
 }
-
 
 /* =========================
    HOVER OVERLAY
@@ -3191,8 +3179,7 @@
   pointer-events: none;
 }
 
-.certificate-card-new:hover
-.certificate-overlay-new {
+.certificate-card-new:hover .certificate-overlay-new {
   opacity: 1;
 }
 
@@ -3209,7 +3196,6 @@
 
   letter-spacing: 1.5px;
 }
-
 
 /* =========================
    CERTIFICATE INFO
@@ -3265,7 +3251,6 @@
   font-size: 12px;
 }
 
-
 /* =========================
    FULL SCREEN VIEWER
 ========================= */
@@ -3291,7 +3276,6 @@
   overflow-y: auto;
 }
 
-
 /* =========================
    VIEWER BOX
 ========================= */
@@ -3309,10 +3293,8 @@
 
   border: 1px solid rgba(255, 255, 255, 0.12);
 
-  box-shadow:
-    0 30px 100px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.7);
 }
-
 
 /* =========================
    CLOSE BUTTON
@@ -3357,7 +3339,6 @@
   transform: rotate(90deg);
 }
 
-
 /* =========================
    LARGE CERTIFICATE
 ========================= */
@@ -3397,7 +3378,6 @@
   background: #ffffff;
 }
 
-
 /* =========================
    CERTIFICATE DETAILS
 ========================= */
@@ -3436,7 +3416,6 @@
   font-size: 14px;
 }
 
-
 /* =========================
    RELATED SECTION
 ========================= */
@@ -3458,7 +3437,6 @@
 
   font-weight: 500;
 }
-
 
 /* =========================
    RELATED LIST
@@ -3514,13 +3492,11 @@
   line-height: 1.6;
 }
 
-
 /* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 900px) {
-
   .certificates {
     padding: 100px 7%;
   }
@@ -3572,7 +3548,6 @@
   }
 }
 
-
 /* =========================
    VIEW MORE CERTIFICATES
 ========================= */
@@ -3622,8 +3597,7 @@
   background: rgba(139, 92, 246, 0.16);
   border-color: #8b5cf6;
 
-  box-shadow:
-    0 0 25px rgba(139, 92, 246, 0.18);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.18);
 
   transform: translateY(-3px);
 }
@@ -3631,7 +3605,6 @@
 .view-more-certificates:hover span {
   transform: translateY(3px);
 }
-
 
 /* =========================
    VIEW MORE MOBILE

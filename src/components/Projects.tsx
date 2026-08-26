@@ -7,9 +7,12 @@ interface Project {
   tech: string;
   type: string;
 
+  // Project status
   status: "live" | "working";
 
+  // Separate links
   liveLink: string;
+  workingLink: string;
   githubLink: string;
 }
 
@@ -23,7 +26,9 @@ const Projects = () => {
       tech: "C++ • DSA • OOP • File Handling",
       type: "SDP PROJECT",
       status: "working",
+
       liveLink: "",
+      workingLink: "",
       githubLink: "",
     },
 
@@ -35,7 +40,9 @@ const Projects = () => {
       tech: "HTML • CSS • JavaScript",
       type: "WEB PROJECT",
       status: "live",
+
       liveLink: "",
+      workingLink: "",
       githubLink: "",
     },
 
@@ -47,7 +54,9 @@ const Projects = () => {
       tech: "Dart • Flutter",
       type: "APP PROJECT",
       status: "live",
+
       liveLink: "",
+      workingLink: "",
       githubLink: "",
     },
 
@@ -59,7 +68,9 @@ const Projects = () => {
       tech: "App Development • Google Fit",
       type: "APP PROJECT",
       status: "working",
+
       liveLink: "",
+      workingLink: "",
       githubLink: "",
     },
 
@@ -71,7 +82,9 @@ const Projects = () => {
       tech: "HTML • CSS • JavaScript",
       type: "WEB PROJECT",
       status: "working",
+
       liveLink: "https://sci-zeta.vercel.app/",
+      workingLink: "https://sci-zeta.vercel.app/",
       githubLink: "https://github.com/212myash/institute-project.git",
     },
 
@@ -83,7 +96,9 @@ const Projects = () => {
       tech: "Python",
       type: "PYTHON PROJECT",
       status: "live",
+
       liveLink: "",
+      workingLink: "",
       githubLink: "",
     },
 
@@ -95,8 +110,10 @@ const Projects = () => {
       tech: "JavaScript",
       type: "WEB PROJECT",
       status: "working",
-      liveLink: "",
-      githubLink: "",
+
+      liveLink: "https://dynamic-lecture-analyzer-three.vercel.app/",
+      workingLink: "https://dynamic-lecture-analyzer-three.vercel.app/",
+      githubLink: "https://github.com/naureen809-ai/Dynamic-Lecture-Analyzer.git",
     },
 
     {
@@ -107,8 +124,10 @@ const Projects = () => {
       tech: "JavaScript",
       type: "AI / WEB PROJECT",
       status: "working",
-      liveLink: "",
-      githubLink: "",
+
+      liveLink: "https://ai-payroll-expense-management-flax.vercel.app/",
+      workingLink: "https://ai-payroll-expense-management-flax.vercel.app/",
+      githubLink: "https://github.com/Biswajeet111/ai-payroll-expense-management.git",
     },
 
     {
@@ -119,7 +138,9 @@ const Projects = () => {
       tech: "Dart • Flutter",
       type: "APP PROJECT",
       status: "working",
+
       liveLink: "",
+      workingLink: "",
       githubLink: "",
     },
 
@@ -131,8 +152,10 @@ const Projects = () => {
       tech: "React • TypeScript • CSS",
       type: "PERSONAL PROJECT",
       status: "live",
-      liveLink: "",
-      githubLink: "",
+
+      liveLink: "https://yash-portfolio-six-liart.vercel.app/",
+      workingLink: "",
+      githubLink: "https://github.com/212myash/yash-portfolio",
     },
   ];
 
@@ -252,83 +275,119 @@ const Projects = () => {
                     PROJECT BUTTONS
                 ========================= */}
 
-                {/* =========================
-    PROJECT BUTTONS
-========================= */}
-
-<div className="project-links">
-
-  {/* LIVE DEMO / CURRENTLY WORKING */}
-
-  {project.status === "live" ? (
-    <a
-      href={project.liveLink || "#"}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="project-btn project-btn-live"
-      onClick={(event) => {
-        if (!project.liveLink) {
-          event.preventDefault();
-        }
-      }}
-    >
-      <span>Live Demo</span>
-
-      <span className="project-btn-arrow">
-        ↗
-      </span>
-    </a>
-  ) : (
-    <a
-      href={project.githubLink || "#"}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="project-btn project-btn-working"
-      onClick={(event) => {
-        if (!project.githubLink) {
-          event.preventDefault();
-        }
-      }}
-    >
-      <span className="project-working-dot"></span>
-
-      <span>Currently Working</span>
-
-      <span className="project-btn-arrow">
-        ↗
-      </span>
-    </a>
-  )}
+                <div className="project-links">
 
 
-  {/* GITHUB */}
+                  {/* =========================
+                      LIVE DEMO
+                  ========================= */}
 
-  <a
-    href={project.githubLink || "#"}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="project-btn project-btn-github"
-    onClick={(event) => {
-      if (!project.githubLink) {
-        event.preventDefault();
-      }
-    }}
-  >
-    <span className="github-icon">
-      {"</>"}
-    </span>
+                  <a
+                    href={project.liveLink || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`project-btn project-btn-live ${
+                      !project.liveLink
+                        ? "project-btn-disabled"
+                        : ""
+                    }`}
+                    onClick={(event) => {
+                      if (!project.liveLink) {
+                        event.preventDefault();
+                      }
+                    }}
+                  >
 
-    <span>GitHub</span>
+                    <span>
+                      Live Demo
+                    </span>
 
-    <span className="project-btn-arrow">
-      ↗
-    </span>
-  </a>
+                    <span className="project-btn-arrow">
+                      ↗
+                    </span>
 
-</div>
+                  </a>
+
+
+                  {/* =========================
+                      CURRENTLY WORKING
+                  ========================= */}
+
+                  <a
+                    href={project.workingLink || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`project-btn project-btn-working ${
+                      !project.workingLink
+                        ? "project-btn-disabled"
+                        : ""
+                    }`}
+                    onClick={(event) => {
+                      if (!project.workingLink) {
+                        event.preventDefault();
+                      }
+                    }}
+                  >
+
+                    <span className="project-working-dot"></span>
+
+                    <span>
+                      Currently Working
+                    </span>
+
+                    <span className="project-btn-arrow">
+                      ↗
+                    </span>
+
+                  </a>
+
+
+                  {/* =========================
+                      GITHUB
+                  ========================= */}
+
+                  <a
+                    href={project.githubLink || "#"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`project-btn project-btn-github ${
+                      !project.githubLink
+                        ? "project-btn-disabled"
+                        : ""
+                    }`}
+                    onClick={(event) => {
+                      if (!project.githubLink) {
+                        event.preventDefault();
+                      }
+                    }}
+                  >
+
+                    <span className="github-icon">
+                      {"</>"}
+                    </span>
+
+                    <span>
+                      GitHub
+                    </span>
+
+                    <span className="project-btn-arrow">
+                      ↗
+                    </span>
+
+                  </a>
+
+                </div>
 
               </div>
 
+
+              {/* =========================
+                  CARD ARROW
+              ========================= */}
+
+              <div className="project-arrow">
+                ↗
+              </div>
 
             </article>
 
