@@ -480,10 +480,6 @@
 }
 
 /* =========================
-   MOBILE RESPONSIVE
-========================= */
-
-/* =========================
    MOBILE HERO
 ========================= */
 
@@ -553,51 +549,242 @@
   }
 }
 
+
 /* =========================
    ABOUT SECTION
 ========================= */
 
 .about {
   position: relative;
-
   min-height: 100vh;
-
   padding: 140px 10%;
-
   background: #0b0b0d;
-
   border-top: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
 }
+
+/* =========================
+   SECTION LABEL
+========================= */
 
 .section-label {
   margin-bottom: 70px;
-
   color: #8b5cf6;
-
   font-size: 13px;
   font-weight: 700;
-
   letter-spacing: 5px;
 }
 
+/* =========================
+   ABOUT CONTENT
+========================= */
+
 .about-content {
   display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
   gap: 100px;
-
   max-width: 1300px;
-
   margin: auto;
 }
 
+/* =========================
+   PROFILE IMAGE CONTAINER
+========================= */
+
+.about-image {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 520px;
+
+  /* Important */
+  isolation: isolate;
+}
+
+/* =========================
+   PURPLE BACKGROUND GLOW
+========================= */
+
+.about-image-glow {
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  border-radius: 50%;
+
+  background: rgba(139, 92, 246, 0.22);
+
+  filter: blur(70px);
+
+  z-index: -2;
+
+  pointer-events: none;
+}
+
+/* =====================================================
+   MOVING GLOWING RING
+   Only moving segment — NO static outline
+===================================================== */
+
+.about-image::after {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  border-radius: 50%;
+
+  /*
+    Main moving gradient.
+
+    Bright part:
+    white → light purple → purple
+
+    Then gradually fades:
+    purple → transparent
+  */
+  background: conic-gradient(
+    from 0deg,
+
+    transparent 0deg,
+    transparent 285deg,
+
+    rgba(139, 92, 246, 0.08) 300deg,
+    rgba(139, 92, 246, 0.18) 312deg,
+    rgba(139, 92, 246, 0.35) 322deg,
+
+    rgba(168, 85, 247, 0.65) 332deg,
+    #a855f7 340deg,
+    #c084fc 347deg,
+    #ffffff 352deg,
+
+    #c084fc 356deg,
+    rgba(168, 85, 247, 0.65) 358deg,
+
+    transparent 360deg
+  );
+
+  /*
+    Sirf outer edge dikhegi.
+    Andar ka pura circle transparent rahega.
+  */
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 8px),
+    #000 calc(100% - 7px)
+  );
+
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 8px),
+    #000 calc(100% - 7px)
+  );
+
+  /*
+    Purple glow
+  */
+  filter:
+    drop-shadow(0 0 4px rgba(139, 92, 246, 1))
+    drop-shadow(0 0 10px rgba(139, 92, 246, 0.95))
+    drop-shadow(0 0 22px rgba(139, 92, 246, 0.65))
+    drop-shadow(0 0 40px rgba(139, 92, 246, 0.3));
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  animation: profileRingSpin 2.8s linear infinite;
+}
+
+/* =========================
+   ROTATION
+========================= */
+
+@keyframes profileRingSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   PROFILE IMAGE
+========================= */
+
+.about-image img {
+  position: relative;
+
+  z-index: 2;
+
+  width: 430px;
+  height: 430px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  display: block;
+
+  /*
+    No permanent bright border.
+    Sirf halka sa edge.
+  */
+  border: 1px solid rgba(139, 92, 246, 0.18);
+
+  box-shadow:
+    0 0 30px rgba(139, 92, 246, 0.25),
+    0 0 80px rgba(139, 92, 246, 0.12);
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* =========================
+   IMAGE HOVER
+========================= */
+
+.about-image:hover img {
+  transform: scale(1.02);
+
+  box-shadow:
+    0 0 40px rgba(139, 92, 246, 0.4),
+    0 0 100px rgba(139, 92, 246, 0.2);
+}
+
+/* =========================
+   ABOUT INFO
+========================= */
+
+.about-info {
+  width: 100%;
+}
+
+/* =========================
+   ABOUT TITLE
+========================= */
+
 .about-title h2 {
-  max-width: 600px;
+  max-width: 650px;
+
+  margin: 0;
 
   color: #ffffff;
 
   font-size: clamp(45px, 5vw, 75px);
+
+  font-weight: 700;
 
   line-height: 1.05;
 
@@ -608,8 +795,13 @@
   color: #8b5cf6;
 }
 
+/* =========================
+   ABOUT TEXT
+========================= */
+
 .about-text {
-  max-width: 600px;
+  max-width: 650px;
+  margin-top: 45px;
 }
 
 .about-text p {
@@ -621,6 +813,10 @@
 
   line-height: 1.8;
 }
+
+/* =========================
+   ABOUT STATS
+========================= */
 
 .about-stats {
   display: flex;
@@ -634,12 +830,18 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.stat {
+  min-width: 100px;
+}
+
 .stat h3 {
-  margin-bottom: 8px;
+  margin: 0 0 8px;
 
   color: #ffffff;
 
   font-size: 30px;
+
+  font-weight: 700;
 }
 
 .stat p {
@@ -651,7 +853,42 @@
 }
 
 /* =========================
-   ABOUT MOBILE
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 70px;
+  }
+
+  .about-image {
+    min-height: auto;
+  }
+
+  .about-image img {
+    width: 380px;
+    height: 380px;
+  }
+
+  .about-image-glow {
+    width: 380px;
+    height: 380px;
+  }
+
+  .about-image::after {
+    width: 400px;
+    height: 400px;
+  }
+
+  .about-info {
+    max-width: 700px;
+    margin: auto;
+  }
+}
+
+/* =========================
+   MOBILE
 ========================= */
 
 @media (max-width: 768px) {
@@ -659,20 +896,110 @@
     padding: 100px 7%;
   }
 
-  .about-content {
-    grid-template-columns: 1fr;
+  .section-label {
+    margin-bottom: 50px;
+  }
 
-    gap: 50px;
+  .about-content {
+    gap: 55px;
+  }
+
+  .about-image {
+    min-height: 340px;
+  }
+
+  .about-image img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .about-image-glow {
+    width: 300px;
+    height: 300px;
+
+    filter: blur(60px);
+  }
+
+  .about-image::after {
+    width: 320px;
+    height: 320px;
+
+    /*
+      Mobile par ring thodi thin
+    */
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      transparent calc(100% - 7px),
+      #000 calc(100% - 6px)
+    );
+
+    mask: radial-gradient(
+      farthest-side,
+      transparent calc(100% - 7px),
+      #000 calc(100% - 6px)
+    );
   }
 
   .about-title h2 {
     font-size: 45px;
+    letter-spacing: -2px;
+  }
+
+  .about-text {
+    margin-top: 35px;
+  }
+
+  .about-text p {
+    font-size: 16px;
   }
 
   .about-stats {
     gap: 25px;
+    justify-content: space-between;
+  }
+
+  .stat h3 {
+    font-size: 26px;
   }
 }
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .about-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-image-glow {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-image::after {
+    width: 270px;
+    height: 270px;
+  }
+
+  .about-title h2 {
+    font-size: 38px;
+  }
+
+  .about-stats {
+    gap: 15px;
+  }
+
+  .stat h3 {
+    font-size: 23px;
+  }
+
+  .stat p {
+    font-size: 11px;
+  }
+}
+
 
 /* =========================
    SKILLS SECTION
