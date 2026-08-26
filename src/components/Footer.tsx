@@ -1,9 +1,4 @@
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaFacebookF,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaFacebookF } from "react-icons/fa";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -15,7 +10,6 @@ const Footer = () => {
       ========================= */}
 
       <div className="footer-container">
-
         {/* =========================
             BRAND
         ========================= */}
@@ -26,14 +20,11 @@ const Footer = () => {
           </div>
 
           <p>
-            Computer Science Engineering student and developer passionate
-            about building modern digital experiences.
+            Computer Science Engineering student and developer passionate about
+            building modern digital experiences.
           </p>
 
-          <a
-            href="mailto:212myashraj@gmail.com"
-            className="footer-email"
-          >
+          <a href="mailto:212myashraj@gmail.com" className="footer-email">
             212myashraj@gmail.com
           </a>
         </div>
@@ -69,24 +60,20 @@ const Footer = () => {
           <div className="footer-contact-item">
             <span>ADDRESS</span>
             <p>
-              S/O: Arbind Kumar Modi, Shivam Computer Infotech,
-              Sakuntla Market, A.G. Colony Ashiananagar,
-              P.O. Ashiananagar, Patna, Bihar – 800025.
+              S/O: Arbind Kumar Modi, Shivam Computer Infotech, Sakuntla Market,
+              A.G. Colony Ashiananagar, P.O. Ashiananagar, Patna, Bihar –
+              800025.
             </p>
           </div>
 
           <div className="footer-contact-item">
             <span>PHONE</span>
-            <a href="tel:+916206825865">
-              +91 6206825865
-            </a>
+            <a href="tel:+916206825865">+91 6206825865</a>
           </div>
 
           <div className="footer-contact-item">
             <span>EMAIL</span>
-            <a href="mailto:212myashraj@gmail.com">
-              212myashraj@gmail.com
-            </a>
+            <a href="mailto:212myashraj@gmail.com">212myashraj@gmail.com</a>
           </div>
         </div>
 
@@ -145,7 +132,6 @@ const Footer = () => {
             <span className="footer-social-arrow">↗</span>
           </a>
         </div>
-
       </div>
 
       {/* =========================
@@ -159,9 +145,7 @@ const Footer = () => {
       ========================= */}
 
       <div className="footer-bottom">
-        <p>
-          © {currentYear} Yash Raj. All rights reserved.
-        </p>
+        <p>© {currentYear} Yash Raj. All rights reserved.</p>
 
         <p className="footer-built">
           Designed & built with curiosity, code & creativity.
